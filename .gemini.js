@@ -2,20 +2,28 @@ module.exports = {
     rootUrl: 'https://tver.leroymerlin.ru/',
     gridUrl: 'http://127.0.0.1:4444/wd/hub',
     windowSize: '1600x900',
-    //calibrate: false,
+    calibrate: false,
+    compositeImage: true,
+    sessionsPerBrowser: 2,
+    screenshotMode: 'viewport',
+    screenshotDelay: 1000,
+    suitesPerSession: 100,
 
     browsers: {
         chrome: {
             desiredCapabilities: {
-                browserName: 'chrome'
+                browserName: 'chrome',
+                chromeOptions: {
+                    args: [ 'headless' ],
+                }
+            }
+        },
+
+        firefox: {
+            desiredCapabilities: {
+                browserName: 'firefox'
             }
         }
-/*        firefox: {
-            desiredCapabilities: {
-                browserName: 'firefox',
-                version: "58.0.2"
-            }
-        }*/
     },
 
     system: {
@@ -26,6 +34,16 @@ module.exports = {
                 defaultView: 'all',
                 baseHost: 'test.com'
             }
+        }
+    },
+    sets: {
+        chrome: {
+            files: ['gemini/chromesuite'],
+            browsers: ['chrome']
+        },
+        firefox: {
+            files: ['gemini/firefoxsuite'],
+            browsers: ['firefox']
         }
     }
 };

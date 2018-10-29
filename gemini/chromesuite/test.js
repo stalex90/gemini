@@ -1,17 +1,17 @@
-gemini.suite('leroymerlin-banner', (suite) => {
-    suite.setUrl('/catalogue/shtukaturki/')
-        .setCaptureElements('.banner','.popover-content')
+var panel = require('./tver');
+
+gemini.suite('leroymerlin2', (suite) => {
+    suite.setUrl('/search/?q=Гвозди&plpView=largeCard')
+        .setCaptureElements('body')
         .before(function(actions, find){
-            this.button = find('.banner');
+            this.button = find('body');
+            panel.disableTopPanel(actions, find);
         })
-        .capture('banner-plain')
-        .capture('banner-hover', function(actions, find) {
-            actions.mouseMove(this.button);
-        })
-        .capture('banner-pressed', function(actions, find){
-            actions.mouseDown(this.button);
-        });
+        .capture('plain2');
 });
+
+
+
 
 gemini.suite('leroymerlin-location', (suite) => {
     suite.setUrl('/catalogue/shtukaturki/')
@@ -21,6 +21,7 @@ gemini.suite('leroymerlin-location', (suite) => {
         })
         .capture('location-plain');
 });
+
 
 gemini.suite('leroymerlin-locationOk', (suite) => {
     suite.setUrl('/catalogue/shtukaturki/')
@@ -861,6 +862,7 @@ gemini.suite('leroymerlin-showAsBigCart', (suite) => {
             actions.click(this.button2);
         });
 });
+
 
 
 

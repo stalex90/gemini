@@ -1,0 +1,27 @@
+{
+  "name": "untitled",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".gemini.js",
+  "dependencies": {
+    "geckodriver": "^1.12.2",
+    "html-reporter": "^2.22.0"
+  },
+  "devDependencies": {
+    "gemini": "^5.9.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stalex90/gemini.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stalex90/gemini/issues"
+  },
+  "homepage": "https://github.com/stalex90/gemini#readme"
+}
