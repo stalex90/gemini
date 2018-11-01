@@ -13,55 +13,80 @@ module.exports = {
         'chrome-1600x900': {
             windowSize: '1600x900',
             desiredCapabilities: {
-                browserName: 'chrome'
-            }
+                browserName: 'chrome',
+                chromeOptions: {
+                    args: [ 'headless' ]
+                }
+            },
+
         },
 
         'chrome-1024x768': {
             windowSize: '1024x768',
 
             desiredCapabilities: {
-                browserName: 'chrome'
+                browserName: 'chrome',
+                chromeOptions: {
+                    args: [ 'headless' ]
+                }
             }
         },
 
         'chrome-800x600': {
             windowSize: '800x600',
             desiredCapabilities: {
-                browserName: 'chrome'
+                browserName: 'chrome',
+                chromeOptions: {
+                    args: [ 'headless' ]
+                }
             }
         },
 
         'chrome-480x800': {
             windowSize: '480x800',
             desiredCapabilities: {
-                browserName: 'chrome'
+                browserName: 'chrome',
+                chromeOptions: {
+                    args: [ 'headless' ]
+                }
             }
         },
 
         'firefox-1600x900': {
             windowSize: '1600x900',
             desiredCapabilities: {
-                browserName: 'firefox'
+                browserName: 'firefox',
+                "moz:firefoxOptions": {
+                    args: ['-headless']
+                }
             }
         },
 
         'firefox-1024x768': {
             windowSize: '1024x768',
             desiredCapabilities: {
-                browserName: 'firefox'
+                browserName: 'firefox',
+                "moz:firefoxOptions": {
+                    args: ['-headless']
+                }
             }
         },
         'firefox-800x600': {
             windowSize: '800x600',
             desiredCapabilities: {
-                browserName: 'firefox'
+                browserName: 'firefox',
+                "moz:firefoxOptions": {
+                    args: ['-headless']
+                }
             }
         },
         'firefox-480x800': {
             windowSize: '480x800',
             desiredCapabilities: {
-                browserName: 'firefox'
+                browserName: 'firefox',
+                "moz:firefoxOptions": {
+                     args: ['-headless']
+                }
             }
         }
         /*,
