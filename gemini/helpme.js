@@ -1,3 +1,8 @@
+/**
+ * flag = 0 - берется url прода, flag != 0 - берется тестовый url
+ */
+var flag = process.env.LM_FLAG;
+
 function disableTopPanel(actions, find) {
     actions.executeJS(function(window) {window.scroll(0,500);});
     actions.wait(1000);
@@ -31,10 +36,7 @@ function clickYesCookie(actions, find) {
 
 }
 
-/**
- * flag = 0 - берется url прода, flag != 0 - берется тестовый url
- */
-var flag = 1;
+
 
 module.exports = {
     disableTopPanel: disableTopPanel,
