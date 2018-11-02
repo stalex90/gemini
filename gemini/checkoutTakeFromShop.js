@@ -5,7 +5,7 @@ if (helper.flag == 0){
 }else {
     var url = "http://drulmttaema01.int.adeo.com:4522/content/elbrus/kostroma/ru/checkout/delivery-option.html";}
 
-gemini.suite('checkout', (suite) => {
+gemini.suite('checkoutTakeFromShop', (suite) => {
     suite.setUrl(url)
         .setCaptureElements('body')
         .before(function(actions, find){
@@ -24,6 +24,8 @@ gemini.suite('checkout', (suite) => {
             helper.clickCheckout(actions, find);
             actions.wait(5000);
             helper.clickContinueWithoutRegistration(actions, find);
+            actions.wait(5000);
+            helper.clickTakeFromShop(actions, find);
             actions.wait(5000);
             helper.clickYesCookie(actions, find);
             helper.disableTopPanel(actions, find);

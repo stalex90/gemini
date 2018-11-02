@@ -8,6 +8,7 @@ if (helper.flag == 0){
 gemini.suite('pdp', (suite) => {
     suite.setUrl(url)
         .setCaptureElements('body')
+        .ignoreElements({every: '.pdp-product-img__cover.pdp-product-img--shown'}, {every: '.card-small__card-picture-img'})
         .before(function(actions, find){
             this.button = find('body');
             if (helper.flag != 0) {

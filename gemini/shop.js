@@ -8,6 +8,7 @@ if (helper.flag == 0){
 gemini.suite('shop', (suite) => {
     suite.setUrl(url)
         .setCaptureElements('body')
+        .ignoreElements({every: '.wcommunity_wrap'})
         .before(function(actions, find){
             this.button = find('body');
             if (helper.flag != 0) {

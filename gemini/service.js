@@ -8,6 +8,7 @@ if (helper.flag == 0){
 gemini.suite('service', (suite) => {
     suite.setUrl(url)
         .setCaptureElements('body')
+        .ignoreElements({every: '.service-link'})
         .before(function(actions, find){
             this.button = find('body');
             if (helper.flag != 0) {

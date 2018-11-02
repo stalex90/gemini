@@ -9,6 +9,7 @@ if (helper.flag == 0){
 gemini.suite('basketFull', (suite) => {
     suite.setUrl(url)
         .setCaptureElements('body')
+        .ignoreElements('.center-block.product-link')
         .before(function(actions, find){
             this.button = find('body');
             if (helper.flag != 0) {
@@ -25,7 +26,10 @@ gemini.suite('basketFull', (suite) => {
             helper.removeDescriptionFooterBlock(actions, find);
 
         })
-        .capture('plain');
+        .capture('plain')
+        .after(function(actions, find){
+            helper.clearCart(actions, find);
+        });
 });
 
 

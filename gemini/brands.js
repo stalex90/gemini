@@ -9,6 +9,7 @@ if (helper.flag == 0){
 gemini.suite('brands', (suite) => {
     suite.setUrl(url)
         .setCaptureElements('body')
+        .ignoreElements({every: '.brands-image'})
         .before(function(actions, find){
             this.button = find('body');
             if (helper.flag != 0) {

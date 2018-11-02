@@ -87,6 +87,27 @@ function clickContinueWithoutRegistration(actions, find) {
     });
 }
 
+function clickBackToCart(actions, find) {
+    actions.executeJS(function (window) {
+        window.eval("if(document.getElementsByClassName('btn grey-button back-to-basket').length>0){document.getElementsByClassName('btn grey-button back-to-basket')[0].click();}");
+    });
+}
+
+function clearCart(actions, find) {
+    actions.executeJS(function (window) {window.eval("if(document.getElementsByClassName('red-link pull-right all-delete-button').length>0){document.getElementsByClassName('red-link pull-right all-delete-button')[0].click();}");});
+    actions.wait(1000);
+    actions.executeJS(function (window) {window.eval("if(document.getElementsByClassName('btn green-button confirm-button').length>0){document.getElementsByClassName('btn green-button confirm-button')[0].click();}");});
+    actions.wait(1000);
+}
+
+function clickTakeFromShop(actions, find) {
+    actions.executeJS(function (window) {window.eval("if(document.getElementsByClassName('delivery-name delivery-item__text delivery-item__text--to-desktop').length>0){\n" +
+        "    document.getElementsByClassName('delivery-name delivery-item__text delivery-item__text--to-desktop')[0].click();\n" +
+        "}else if (document.getElementsByClassName('delivery-name delivery-item__text delivery-item__text--to-mobile').length>0){\n" +
+        "    document.getElementsByClassName('delivery-name delivery-item__text delivery-item__text--to-mobile')[0].click();\n" +
+        "}");});
+}
+
 module.exports = {
     disableTopPanel: disableTopPanel,
     disableTopPanel2: disableTopPanel2,
@@ -100,6 +121,10 @@ module.exports = {
     clickBasket: clickBasket,
     clickDeliveryOption: clickDeliveryOption,
     clickCheckout: clickCheckout,
-    clickContinueWithoutRegistration: clickContinueWithoutRegistration
+    clickContinueWithoutRegistration: clickContinueWithoutRegistration,
+    clickBackToCart: clickBackToCart,
+    clearCart: clearCart,
+    clickTakeFromShop: clickTakeFromShop
 };
+
 

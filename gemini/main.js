@@ -8,7 +8,8 @@ if (helper.flag == 0){
     gemini.suite('main', (suite) => {
     suite.setUrl(url)
         .setCaptureElements('body')
-        .ignoreElements('.owl-carousel.community-theme.owl-carousel--black.owl-loaded.owl-drag','.owl-carousel.partner-slider.owl-loaded.owl-drag')
+        .ignoreElements('.owl-carousel.community-theme.owl-carousel--black.owl-loaded.owl-drag', {every: '.slider-item-img'},{every: 'img[data-alt*="midlle_small"]'},
+            {every: 'img[data-alt*="middle_big"]'},'img[data-alt*="Выбирайте проще. 3D дом"]', 'img[data-alt*="Новинки месяца"]', {every: '.img-responsive.howto-picture'})
         .before(function(actions, find){
             this.button = find('body');
             if (helper.flag != 0) {

@@ -8,6 +8,7 @@ if (helper.flag == 0){
 gemini.suite('proekty', (suite) => {
     suite.setUrl(url)
         .setCaptureElements('body')
+        .ignoreElements({every: '.banner-image'}, {every: '.project-card__link'})
         .before(function(actions, find){
             this.button = find('body');
             if (helper.flag != 0) {
