@@ -1,11 +1,11 @@
 var helper = require('./helpme');
 
 if (helper.flag == 0){
-    var url = "https://kostroma.leroymerlin.ru/lk/register/";
+    var url = "https://kostroma.leroymerlin.ru/catalogue/shtukaturki/";
 }else {
-    var url = "http://drulmttaema01.int.adeo.com:4522/content/elbrus/kostroma/ru/lk/register.html";}
+    var url = "http://drulmttaema01.int.adeo.com:4522/content/elbrus/kostroma/ru/catalogue/shtukaturki.html";}
 
-gemini.suite('register', (suite) => {
+gemini.suite('plpLarge', (suite) => {
     suite.setUrl(url)
         .setCaptureElements('body')
         .before(function(actions, find){
@@ -18,6 +18,8 @@ gemini.suite('register', (suite) => {
             helper.clickYesCookie(actions, find);
             helper.disableTopPanel(actions, find);
             helper.removeDescriptionFooterBlock(actions, find);
+            helper.removeSeeCoutItemBlock(actions, find);
+            helper.clickLargeCard(actions, find);
         })
         .capture('plain');
 });

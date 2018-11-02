@@ -6,7 +6,7 @@ if (helper.flag == 0){
     var url = "http://drulmttaema01.int.adeo.com:4522/content/elbrus/kostroma/ru/basket.html";
 }
 
-gemini.suite('basket', (suite) => {
+gemini.suite('basketEmpty', (suite) => {
     suite.setUrl(url)
         .setCaptureElements('body')
         .before(function(actions, find){
@@ -18,6 +18,9 @@ gemini.suite('basket', (suite) => {
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
             helper.disableTopPanel(actions, find);
+            helper.removeDescriptionFooterBlock(actions, find);
         })
         .capture('plain');
 });
+
+

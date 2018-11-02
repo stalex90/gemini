@@ -17,6 +17,8 @@ gemini.suite('plp', (suite) => {
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
             helper.disableTopPanel(actions, find);
+            helper.removeDescriptionFooterBlock(actions, find);
+            helper.removeSeeCoutItemBlock(actions, find);
         })
         .capture('plain');
 });

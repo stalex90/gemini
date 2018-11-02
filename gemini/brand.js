@@ -19,6 +19,7 @@ gemini.suite('brand', (suite) => {
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
             helper.disableTopPanel(actions, find);
+            helper.removeDescriptionFooterBlock(actions, find);
         })
         .capture('plain');
 });

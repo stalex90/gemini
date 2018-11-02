@@ -23,6 +23,7 @@ gemini.suite('advice', (suite) => {
                 helper.disableTopPanel(actions, find);
 
             }
+            helper.removeDescriptionFooterBlock(actions, find);
         })
         .capture('plain');
 });

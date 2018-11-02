@@ -16,7 +16,8 @@ gemini.suite('compare', (suite) => {
             actions.wait(5000);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
-            //helper.disableTopPanel(actions, find);
+            helper.disableTopPanel(actions, find);
+            helper.removeDescriptionFooterBlock(actions, find);
         })
         .capture('plain');
 });

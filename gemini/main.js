@@ -8,6 +8,7 @@ if (helper.flag == 0){
     gemini.suite('main', (suite) => {
     suite.setUrl(url)
         .setCaptureElements('body')
+        .ignoreElements('.owl-carousel.community-theme.owl-carousel--black.owl-loaded.owl-drag','.owl-carousel.partner-slider.owl-loaded.owl-drag')
         .before(function(actions, find){
             this.button = find('body');
             if (helper.flag != 0) {
@@ -17,6 +18,7 @@ if (helper.flag == 0){
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
             helper.disableTopPanel(actions, find);
+            helper.removeDescriptionFooterBlock(actions, find);
         })
         .capture('plain');
 });
