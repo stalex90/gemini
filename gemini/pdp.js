@@ -1,16 +1,10 @@
-var helper = require('./helpme');
-
-if (helper.flag == 0){
-    var url = "https://kostroma.leroymerlin.ru/product/shtukaturka-cementnaya-axton-5-kg-81946337/";
-}else {
-    var url = "http://drulmttaema01.int.adeo.com:4522/content/elbrus/kostroma/ru/product/shtukaturka-cementnaya-axton-5-kg-81946337.html";}
+var helper = require('../iesuite/helpme');
 
 gemini.suite('pdp', (suite) => {
-    suite.setUrl(url)
+    suite.setUrl(helper.urlJson.pdp[process.env.LM_FLAG])
         .setCaptureElements('body')
         .ignoreElements({every: '.pdp-product-img__cover.pdp-product-img--shown'}, {every: '.card-small__card-picture-img'})
         .before(function(actions, find){
-            this.button = find('body');
             if (helper.flag != 0) {
                 helper.loginStaging(actions, find);
             }
@@ -19,6 +13,21 @@ gemini.suite('pdp', (suite) => {
             helper.clickYesCookie(actions, find);
             helper.disableTopPanel(actions, find);
             helper.removeDescriptionFooterBlock(actions, find);
+        })
+        .capture('plain');
+});
+
+gemini.suite('pdpHeader', (suite) => {
+    suite.setUrl(helper.urlJson.pdp[process.env.LM_FLAG])
+        .setCaptureElements('div[class*="header-inner"] > div.container')
+        .before(function(actions, find) {
+            if (helper.flag != 0) {
+                helper.loginStaging(actions, find);
+            }
+            actions.wait(5000);
+            helper.clickYesRegion(actions, find);
+            helper.clickYesCookie(actions, find);
+            helper.scrollDown(actions,find);
         })
         .capture('plain');
 });

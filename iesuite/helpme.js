@@ -3,6 +3,85 @@
  */
 var flag = process.env.LM_FLAG;
 
+var urlJson = JSON.parse("{\n" +
+    "  \"main\": [\n" +
+    "    \"/\",\n" +
+    "    \"ru.html?wcmmode=disabled\"\n" +
+    "  ],\n" +
+    "  \"catalogue\": [\n" +
+    "    \"catalogue/stroymaterialy/\",\n" +
+    "    \"ru/catalogue/stroymaterialy.html\"\n" +
+    "  ],\n" +
+    "  \"plp\": [\n" +
+    "    \"catalogue/shtukaturki/\",\n" +
+    "    \"ru/catalogue/shtukaturki.html\"\n" +
+    "  ],\n" +
+    "  \"pdp\": [\n" +
+    "    \"product/shtukaturka-cementnaya-axton-5-kg-81946337/\",\n" +
+    "    \"ru/product/shtukaturka-cementnaya-axton-5-kg-81946337.html\"\n" +
+    "  ],\n" +
+    "  \"basket\": [\n" +
+    "    \"basket/\",\n" +
+    "    \"ru/basket.html\"\n" +
+    "  ],\n" +
+    "  \"wishlist\": [\n" +
+    "    \"shopping-list/\",\n" +
+    "    \"ru/shopping-list.html\"\n" +
+    "  ],\n" +
+    "  \"checkout\": [\n" +
+    "    \"checkout/delivery-option/\",\n" +
+    "    \"ru/checkout/delivery-option.html\"\n" +
+    "  ],\n" +
+    "  \"faq\": [\n" +
+    "    \"faq/\",\n" +
+    "    \"ru/faq.html\"\n" +
+    "  ],\n" +
+    "  \"advice\": [\n" +
+    "    \"advice/\",\n" +
+    "    \"ru/advice.html\"\n" +
+    "  ],\n" +
+    "  \"service\": [\n" +
+    "    \"shop/kostroma/service/\",\n" +
+    "    \"ru/shop/kostroma/service.html\"\n" +
+    "  ],\n" +
+    "  \"shops\": [\n" +
+    "    \"shop/\",\n" +
+    "    \"ru/shop.html\"\n" +
+    "  ],\n" +
+    "  \"shop\": [\n" +
+    "    \"shop/kostroma/\",\n" +
+    "    \"ru/shop/kostroma.html\"\n" +
+    "  ],\n" +
+    "  \"proekty\": [\n" +
+    "    \"proekty/\",\n" +
+    "    \"ru/proekty.html\"\n" +
+    "  ],\n" +
+    "  \"compare\": [\n" +
+    "    \"catalogue/compare/\",\n" +
+    "    \"ru/catalogue/compare.html\"\n" +
+    "  ],\n" +
+    "  \"register\": [\n" +
+    "    \"lk/register/\",\n" +
+    "    \"ru/lk/register.html\"\n" +
+    "  ],\n" +
+    "  \"obratnayaSvyaz\": [\n" +
+    "    \"company/obratnaya-svyaz/\",\n" +
+    "    \"ru/company/obratnaya-svyaz.html\"\n" +
+    "  ],\n" +
+    "  \"brands\": [\n" +
+    "    \"brands/\",\n" +
+    "    \"ru/brands.html\"\n" +
+    "  ],\n" +
+    "  \"brand\": [\n" +
+    "    \"brands/axton/\",\n" +
+    "    \"ru/brands/axton.html\"\n" +
+    "  ],\n" +
+    "  \"srp\": [\n" +
+    "    \"search/?q=дверь\",\n" +
+    "    \"ru/search.html?q=дверь\"\n" +
+    "  ]\n" +
+    "}");
+
 function disableTopPanel(actions, find) {
     actions.executeJS(function(window) {window.scroll(0,500);});
     actions.wait(1000);
@@ -17,6 +96,11 @@ function disableTopPanel2(actions, find) {
     actions.executeJS(function(window) {window.eval("if (document.getElementsByClassName('headerMain-inner is-sticky').length >0){\n" +
         "    document.getElementsByClassName('headerMain-inner is-sticky')[0].style.position = 'static';\n" +
         "}");});
+}
+
+function scrollDown(actions, find) {
+    actions.executeJS(function(window) {window.scroll(0,500);});
+    actions.wait(1000);
 }
 
 
@@ -93,6 +177,14 @@ function clickBackToCart(actions, find) {
     });
 }
 
+
+
+function clickContinueCheckout(actions, find) {
+    actions.executeJS(function (window) {
+        window.eval("if(document.getElementsByClassName('btn green-button delivery-submit delivery-option-next-btn next-btn').length>0){document.getElementsByClassName('btn green-button delivery-submit delivery-option-next-btn next-btn')[0].click();}");
+    });
+}
+
 function clearCart(actions, find) {
     actions.executeJS(function (window) {window.eval("if(document.getElementsByClassName('red-link pull-right all-delete-button').length>0){document.getElementsByClassName('red-link pull-right all-delete-button')[0].click();}");});
     actions.wait(1000);
@@ -124,7 +216,10 @@ module.exports = {
     clickContinueWithoutRegistration: clickContinueWithoutRegistration,
     clickBackToCart: clickBackToCart,
     clearCart: clearCart,
-    clickTakeFromShop: clickTakeFromShop
+    clickTakeFromShop: clickTakeFromShop,
+    scrollDown: scrollDown,
+    clickContinueCheckout: clickContinueCheckout,
+    urlJson: urlJson
 };
 
 

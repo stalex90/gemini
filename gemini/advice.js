@@ -1,23 +1,16 @@
-var helper = require('./helpme');
-
-if (helper.flag == 0){
-    var url = "https://kostroma.leroymerlin.ru/advice/";
-}else {
-    var url = "http://drulmttaema01.int.adeo.com:4522/content/elbrus/kostroma/ru/advice.html";
-}
+var helper = require('../iesuite/helpme');
 
 gemini.suite('advice', (suite) => {
-    suite.setUrl(url)
+    suite.setUrl(helper.urlJson.advice[process.env.LM_FLAG])
         .setCaptureElements('body')
         .ignoreElements({every: '.img-responsive.howto-picture'})
         .before(function(actions, find) {
-            this.button = find('body');
             if (helper.flag != 0) {
             helper.loginStaging(actions, find);
                }
             actions.wait(5000);
             helper.clickYesRegion(actions, find);
-            //helper.clickYesCookie(actions, find);
+            helper.clickYesCookie(actions, find);
             if (helper.flag == 0) {
                 helper.disableTopPanel2(actions, find);
             }else {
@@ -25,6 +18,27 @@ gemini.suite('advice', (suite) => {
 
             }
             helper.removeDescriptionFooterBlock(actions, find);
+        })
+        .capture('plain');
+});
+
+if (helper.flag == 0){
+    var captureElement = "div[class*=\"headerMain-inner\"] > div.container";
+}else {
+    var captureElement = "div[class*=\"header-inner\"] > div.container";
+}
+
+gemini.suite('adviceHeader', (suite) => {
+    suite.setUrl(helper.urlJson.advice[process.env.LM_FLAG])
+        .setCaptureElements(captureElement)
+        .before(function(actions, find) {
+            if (helper.flag != 0) {
+                helper.loginStaging(actions, find);
+            }
+            actions.wait(5000);
+            helper.clickYesRegion(actions, find);
+            helper.clickYesCookie(actions, find);
+            helper.scrollDown(actions,find);
         })
         .capture('plain');
 });
