@@ -1,4 +1,4 @@
-/*var panel = require('../chromesuite/tver');
+/*var panel = require('../desktopTablet/tver');
 
 gemini.suite('leroymerlin2', (suite) => {
     suite.setUrl('/search/?q=Гвозди&plpView=largeCard')

@@ -1,6 +1,6 @@
-var helper = require('../iesuite/helpme');
+var helper = require('../../iesuite/helpme');
 
-gemini.suite('checkoutPayment', (suite) => {
+gemini.suite('checkoutTakeFromShop', (suite) => {
     suite.setUrl(helper.urlJson.checkout[process.env.LM_FLAG])
         .setCaptureElements('body')
         .before(function(actions, find){
@@ -21,22 +21,19 @@ gemini.suite('checkoutPayment', (suite) => {
             actions.wait(5000);
             helper.clickTakeFromShop(actions, find);
             actions.wait(5000);
-            helper.clickContinueCheckout(actions, find);
-            actions.wait(5000);
             helper.clickYesCookie(actions, find);
             helper.disableTopPanel(actions, find);
             helper.removeDescriptionFooterBlock(actions, find);
         })
         .capture('plain')
         .after(function(actions, find){
-            helper.clickBasket(actions, find);
+            helper.clickBackToCart(actions, find);
             actions.wait(3000);
             helper.clearCart(actions, find);
         });
 });
 
-
-gemini.suite('checkoutPaymentHeader', (suite) => {
+gemini.suite('checkoutTakeFromShopHeader', (suite) => {
     suite.setUrl(helper.urlJson.checkout[process.env.LM_FLAG])
         .setCaptureElements('div[class*="header-inner"] > div.container')
         .before(function(actions, find){

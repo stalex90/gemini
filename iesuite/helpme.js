@@ -200,6 +200,74 @@ function clickTakeFromShop(actions, find) {
         "}");});
 }
 
+function clickFastView(actions, find) {
+    actions.executeJS(function (window) {
+        window.eval("if(document.getElementsByClassName('green-middle-button-reg on-image-button').length>0){document.getElementsByClassName('green-middle-button-reg on-image-button')[0].click();}");
+    });
+    actions.wait(5000);
+}
+
+function clickShowAllCharacters(actions, find) {
+    actions.executeJS(function (window) {
+        window.eval("if(document.getElementsByClassName('btn-link btn-limit-description').length>0){document.getElementsByClassName('btn-link btn-limit-description')[0].click();}");
+    });
+    actions.wait(2000);
+}
+
+function clickPickupFromShop(actions, find) {
+    actions.executeJS(function (window) {
+        window.eval("if(document.getElementsByClassName('select2-selection__placeholder').length>0){document.getElementsByClassName('select2-selection__placeholder')[0].click();}");
+    });
+}
+
+function clickFeedback(actions, find) {
+    actions.executeJS(function (window) {
+        window.eval("if(document.getElementsByClassName('nav-item nav-link').length>0){document.getElementsByClassName('nav-item nav-link')[1].click();}");
+    });
+}
+
+function clickSearchAnalog(actions, find) {
+    actions.executeJS(function (window) {
+        window.eval("if(document.getElementsByClassName('btn grey-button bold-border-button pull-right find-analog-btn').length>0){document.getElementsByClassName('btn grey-button bold-border-button pull-right find-analog-btn')[0].click();}");
+    });
+}
+
+function clickShowAdditItem(actions, find) {
+    actions.executeJS(function (window) {
+        window.eval("if(document.getElementsByClassName('btn grey-button additional-button').length>0){document.getElementsByClassName('btn grey-button additional-button')[0].click();}");
+    });
+}
+
+function clickPointMap(actions, find) {
+    actions.executeJS(function (window) {
+        window.eval("if(document.getElementsByClassName('dot').length>0){document.getElementsByClassName('dot')[1].click();}");
+    });
+}
+
+function clickClickCheckoutChangeRegion(actions, find) {
+    actions.executeJS(function (window) {
+        window.eval("if(document.getElementsByClassName('change-link').length>0){document.getElementsByClassName('change-link')[0].click();}");
+    });
+}
+
+function clickClickShopChangeRegion(actions, find) {
+    actions.executeJS(function (window) {
+        window.eval("if(document.getElementsByClassName('region-block__region-name fancybox').length>0){document.getElementsByClassName('region-block__region-name fancybox')[0].click();}");
+    });
+}
+
+function clickShowOtherService(actions, find) {
+    actions.executeJS(function (window) {
+        window.eval("if(document.getElementsByClassName('fancybox').length>0){document.getElementsByClassName('fancybox')[4].click();}");
+    });
+}
+
+function clickSearchChangeShop(actions, find) {
+    actions.executeJS(function (window) {
+        window.eval("if(document.getElementsByClassName('action-button change-favorite-shop fancybox').length>0){document.getElementsByClassName('action-button change-favorite-shop fancybox')[0].click();}");
+    });
+}
+
 module.exports = {
     disableTopPanel: disableTopPanel,
     disableTopPanel2: disableTopPanel2,
@@ -219,7 +287,18 @@ module.exports = {
     clickTakeFromShop: clickTakeFromShop,
     scrollDown: scrollDown,
     clickContinueCheckout: clickContinueCheckout,
-    urlJson: urlJson
+    urlJson: urlJson,
+    clickFastView: clickFastView,
+    clickShowAllCharacters: clickShowAllCharacters,
+    clickPickupFromShop: clickPickupFromShop,
+    clickFeedback: clickFeedback,
+    clickSearchAnalog: clickSearchAnalog,
+    clickShowAdditItem: clickShowAdditItem,
+    clickPointMap: clickPointMap,
+    clickClickCheckoutChangeRegion: clickClickCheckoutChangeRegion,
+    clickClickShopChangeRegion: clickClickShopChangeRegion,
+    clickShowOtherService: clickShowOtherService,
+    clickSearchChangeShop: clickSearchChangeShop
 };
 
 

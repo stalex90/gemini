@@ -1,11 +1,10 @@
-var helper = require('../iesuite/helpme');
+var helper = require('../../iesuite/helpme');
 
-gemini.suite('shops', (suite) => {
-    suite.setUrl(helper.urlJson.shops[process.env.LM_FLAG])
+gemini.suite('srpLarge', (suite) => {
+    suite.setUrl(helper.urlJson.srp[process.env.LM_FLAG])
         .setCaptureElements('body')
-        .ignoreElements('.ya-map')
+        .ignoreElements({every: '.hover-image-buttons-inner'})
         .before(function(actions, find){
-            this.button = find('body');
             if (helper.flag != 0) {
                 helper.loginStaging(actions, find);
             }
@@ -14,12 +13,15 @@ gemini.suite('shops', (suite) => {
             helper.clickYesCookie(actions, find);
             helper.disableTopPanel(actions, find);
             helper.removeDescriptionFooterBlock(actions, find);
+            helper.removeDescriptionFooterBlock(actions, find);
+            helper.clickLargeCard(actions, find);
+
         })
         .capture('plain');
 });
 
-gemini.suite('shopsHeader', (suite) => {
-    suite.setUrl(helper.urlJson.shops[process.env.LM_FLAG])
+gemini.suite('srpLargeHeader', (suite) => {
+    suite.setUrl(helper.urlJson.srp[process.env.LM_FLAG])
         .setCaptureElements('div[class*="header-inner"] > div.container')
         .before(function(actions, find) {
             if (helper.flag != 0) {
