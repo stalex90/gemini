@@ -12,12 +12,7 @@ gemini.suite('advicePopUpHowTo', (suite) => {
             }
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
-            if (helper.flag == 0) {
-                helper.disableTopPanel2(actions, find);
-            }else {
-                helper.disableTopPanel(actions, find);
-
-            }
+            helper.disableTopPanel(actions, find);
         })
         .capture('popupHover', function(actions, find) {
             actions.mouseMove(this.button);

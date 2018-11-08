@@ -39,6 +39,7 @@ gemini.suite('brandPopupCartFull', (suite) => {
             actions.executeJS(function (window) {
                 window.eval("location.reload();");
             });
+            actions.wait(5000);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
         })
@@ -61,6 +62,7 @@ gemini.suite('brandsPopupCartFull', (suite) => {
             actions.executeJS(function (window) {
                 window.eval("location.reload();");
             });
+            actions.wait(5000);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
         })
@@ -83,6 +85,7 @@ gemini.suite('cataloguePopupCartFull', (suite) => {
             actions.executeJS(function (window) {
                 window.eval("location.reload();");
             });
+            actions.wait(5000);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
         })
@@ -105,6 +108,7 @@ gemini.suite('comparePopupCartFull', (suite) => {
             actions.executeJS(function (window) {
                 window.eval("location.reload();");
             });
+            actions.wait(5000);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
         })
@@ -127,6 +131,7 @@ gemini.suite('faqPopupCartFull', (suite) => {
             actions.executeJS(function (window) {
                 window.eval("location.reload();");
             });
+            actions.wait(5000);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
         })
@@ -149,6 +154,7 @@ gemini.suite('mainPopupCartFull', (suite) => {
             actions.executeJS(function (window) {
                 window.eval("location.reload();");
             });
+            actions.wait(5000);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
         })
@@ -171,6 +177,7 @@ gemini.suite('obratnayaSvyazPopupCartFull', (suite) => {
             actions.executeJS(function (window) {
                 window.eval("location.reload();");
             });
+            actions.wait(5000);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
         })
@@ -193,6 +200,7 @@ gemini.suite('pdpPopupCartFull', (suite) => {
             actions.executeJS(function (window) {
                 window.eval("location.reload();");
             });
+            actions.wait(5000);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
         })
@@ -215,6 +223,7 @@ gemini.suite('plpPopupCartFull', (suite) => {
             actions.executeJS(function (window) {
                 window.eval("location.reload();");
             });
+            actions.wait(5000);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
         })
@@ -237,6 +246,7 @@ gemini.suite('proektyPopupCartFull', (suite) => {
             actions.executeJS(function (window) {
                 window.eval("location.reload();");
             });
+            actions.wait(5000);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
         })
@@ -259,6 +269,7 @@ gemini.suite('registerPopupCartFull', (suite) => {
             actions.executeJS(function (window) {
                 window.eval("location.reload();");
             });
+            actions.wait(5000);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
         })
@@ -281,6 +292,7 @@ gemini.suite('servicePopupCartFull', (suite) => {
             actions.executeJS(function (window) {
                 window.eval("location.reload();");
             });
+            actions.wait(5000);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
         })
@@ -303,6 +315,7 @@ gemini.suite('shopPopupCartFull', (suite) => {
             actions.executeJS(function (window) {
                 window.eval("location.reload();");
             });
+            actions.wait(5000);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
         })
@@ -325,6 +338,7 @@ gemini.suite('srpPopupCartFull', (suite) => {
             actions.executeJS(function (window) {
                 window.eval("location.reload();");
             });
+            actions.wait(5000);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
         })
@@ -347,6 +361,7 @@ gemini.suite('wishlistPopupCartFull', (suite) => {
             actions.executeJS(function (window) {
                 window.eval("location.reload();");
             });
+            actions.wait(5000);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
         })
