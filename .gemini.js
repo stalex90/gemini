@@ -4,7 +4,7 @@ module.exports = {
     //windowSize: '1600x900',
     calibrate: false,
     compositeImage: true,
-    sessionsPerBrowser: 1,
+    sessionsPerBrowser: 2,
     screenshotMode: 'viewport',
     screenshotDelay: 1000,
     suitesPerSession: 1,
@@ -16,7 +16,8 @@ module.exports = {
                 browserName: 'chrome',
                 chromeOptions: {
                     args: [ 'headless' ]
-                }
+                },
+                acceptInsecureCerts: true
             },
 
         },
@@ -28,7 +29,8 @@ module.exports = {
                 browserName: 'chrome',
                 chromeOptions: {
                     args: [ 'headless' ]
-                }
+                },
+                acceptInsecureCerts: true
             }
         },
 
@@ -38,7 +40,8 @@ module.exports = {
                 browserName: 'chrome',
                 chromeOptions: {
                     args: [ 'headless' ]
-                }
+                },
+                acceptInsecureCerts: true
             }
         },
 
@@ -48,7 +51,8 @@ module.exports = {
                 browserName: 'chrome',
                 chromeOptions: {
                     args: [ 'headless' ]
-                }
+                },
+                acceptInsecureCerts: true
             }
         },
 
@@ -58,7 +62,9 @@ module.exports = {
                 browserName: 'firefox',
                 "moz:firefoxOptions": {
                     args: ['-headless']
-                }
+                },
+                acceptInsecureCerts: true
+
             }
         },
 
@@ -68,7 +74,9 @@ module.exports = {
                 browserName: 'firefox',
                 "moz:firefoxOptions": {
                     args: ['-headless']
-                }
+                },
+                acceptInsecureCerts: true
+
             }
         },
         'firefox-800x600': {
@@ -77,7 +85,9 @@ module.exports = {
                 browserName: 'firefox',
                 "moz:firefoxOptions": {
                     args: ['-headless']
-                }
+                },
+                acceptInsecureCerts: true
+
             }
         },
         'firefox-480x800': {
@@ -86,7 +96,8 @@ module.exports = {
                 browserName: 'firefox',
                 "moz:firefoxOptions": {
                      args: ['-headless']
-                }
+                },
+                acceptInsecureCerts: true
             }
         }
         /*,
@@ -108,18 +119,22 @@ module.exports = {
         }
     },
     sets: {
-        desktopTablet: {
+/*        desktopTablet: {
             files: ['gemini/desktopTablet'],
             browsers: ['chrome-1600x900', 'chrome-1024x768', 'chrome-800x600', 'firefox-1600x900', 'firefox-1024x768', 'firefox-800x600']
-        },
-        desktopTabletMobile: {
+        },*/
+/*        desktopTabletMobile: {
             files: ['gemini/desktopTabletMobile'],
             browsers: ['chrome-1600x900', 'chrome-1024x768', 'chrome-800x600', 'chrome-480x800', 'firefox-1600x900', 'firefox-1024x768', 'firefox-800x600', 'firefox-480x800']
-        },
+        },*/
         chromeDesktop: {
-            files: ['gemini/chromeDesktop'],
+            files: ['gemini/chromeDesktop/servicePopUp.js'],
             browsers: ['chrome-1600x900', 'chrome-1024x768']
-        }/*,
+        },
+        testSuite: {
+            files: ['gemini/desktopTabletMobile/example.js'],
+            browsers: ['chrome-1600x900', 'firefox-1600x900']
+        },/*,
         ie: {
             files: ['gemini/iesuite'],
             browsers: ['ie']
