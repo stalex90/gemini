@@ -134,6 +134,10 @@ module.exports = {
         testSuite: {
             files: ['gemini/desktopTabletMobile/example.js'],
             browsers: ['chrome-1600x900', 'firefox-1600x900']
+        },
+        mobileTestSuite: {
+            files: ['gemini/desktopTabletMobile/example2.js'],
+            browsers: ['chrome-480x800', 'firefox-480x800']
         },/*,
         ie: {
             files: ['gemini/iesuite'],
