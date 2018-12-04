@@ -1,18 +1,17 @@
-var helper = require('../../iesuite/helpme');
+var helper = require('../helpers/helpme');
+var plpPage = require('../helpers/plpPage');
+
 
 
 gemini.suite('plpFastView', (suite) => {
     suite.setUrl(helper.urlJson.plp[process.env.LM_FLAG])
         .setCaptureElements('.product-quick-view.card-data.container-fluid')
         .before(function(actions, find){
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
-            actions.wait(5000);
+            helper.loginStaging(actions);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
             helper.disableTopPanel(actions, find);
-            helper.clickFastView(actions, find);
+            plpPage.clickFastView(actions);
         })
         .capture('plain');
 });

@@ -1,12 +1,10 @@
-var helper = require('../../iesuite/helpme');
+var helper = require('../helpers/helpme');
 
 gemini.suite('registerFields', (suite) => {
     suite.setUrl(helper.urlJson.register[process.env.LM_FLAG])
         .setCaptureElements('body')
         .before(function(actions, find){
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
             helper.disableTopPanel(actions, find);

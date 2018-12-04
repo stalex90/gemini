@@ -1,4 +1,4 @@
-var helper = require('../../iesuite/helpme');
+var helper = require('../helpers/helpme');
 var captureLocator = '.desc-block';
 var buttonLocator = '.howto-views';
 
@@ -7,9 +7,7 @@ gemini.suite('advicePopUpHowTo', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
             helper.disableTopPanel(actions, find);

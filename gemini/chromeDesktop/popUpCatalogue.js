@@ -1,4 +1,4 @@
-var helper = require('../../iesuite/helpme');
+var helper = require('../helpers/helpme');
 var captureLocator = '.catalog-menu__list.level-1';
 var buttonLocator = '.btn.green-button.catalog-button.dropdown-toggle';
 
@@ -7,14 +7,13 @@ gemini.suite('advicePopupCatalogue', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
         })
         .capture('popupHover', function(actions, find) {
             actions.mouseMove(this.button);
+            actions.wait(3000);
         });
 });
 
@@ -23,14 +22,13 @@ gemini.suite('basketPopupCatalogue', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
         })
         .capture('popupHover', function(actions, find) {
             actions.mouseMove(this.button);
+            actions.wait(3000);
         });
 });
 
@@ -39,14 +37,13 @@ gemini.suite('brandPopupCatalogue', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
         })
         .capture('popupHover', function(actions, find) {
             actions.mouseMove(this.button);
+            actions.wait(3000);
         });
 });
 
@@ -55,14 +52,13 @@ gemini.suite('brandsPopupCatalogue', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
         })
         .capture('popupHover', function(actions, find) {
             actions.mouseMove(this.button);
+            actions.wait(3000);
         });
 });
 
@@ -71,14 +67,13 @@ gemini.suite('cataloguePopupCatalogue', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
         })
         .capture('popupHover', function(actions, find) {
             actions.mouseMove(this.button);
+            actions.wait(3000);
         });
 });
 
@@ -87,14 +82,13 @@ gemini.suite('checkoutPopupCatalogue', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
         })
         .capture('popupHover', function(actions, find) {
             actions.mouseMove(this.button);
+            actions.wait(3000);
         });
 });
 
@@ -103,14 +97,13 @@ gemini.suite('comparePopupCatalogue', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
         })
         .capture('popupHover', function(actions, find) {
             actions.mouseMove(this.button);
+            actions.wait(3000);
         });
 });
 
@@ -119,14 +112,13 @@ gemini.suite('faqPopupCatalogue', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
         })
         .capture('popupHover', function(actions, find) {
             actions.mouseMove(this.button);
+            actions.wait(3000);
         });
 });
 
@@ -135,14 +127,13 @@ gemini.suite('mainPopupCatalogue', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
         })
         .capture('popupHover', function(actions, find) {
             actions.mouseMove(this.button);
+            actions.wait(3000);
         });
 });
 
@@ -151,14 +142,13 @@ gemini.suite('obratnayaSvyazPopupCatalogue', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
         })
         .capture('popupHover', function(actions, find) {
             actions.mouseMove(this.button);
+            actions.wait(3000);
         });
 });
 
@@ -167,14 +157,13 @@ gemini.suite('pdpPopupCatalogue', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
         })
         .capture('popupHover', function(actions, find) {
             actions.mouseMove(this.button);
+            actions.wait(3000);
         });
 });
 
@@ -183,14 +172,13 @@ gemini.suite('plpPopupCatalogue', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
         })
         .capture('popupHover', function(actions, find) {
             actions.mouseMove(this.button);
+            actions.wait(3000);
         });
 });
 
@@ -199,14 +187,13 @@ gemini.suite('proektyPopupCatalogue', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
         })
         .capture('popupHover', function(actions, find) {
             actions.mouseMove(this.button);
+            actions.wait(3000);
         });
 });
 
@@ -215,14 +202,13 @@ gemini.suite('registerPopupCatalogue', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
         })
         .capture('popupHover', function(actions, find) {
             actions.mouseMove(this.button);
+            actions.wait(3000);
         });
 });
 
@@ -231,14 +217,13 @@ gemini.suite('servicePopupCatalogue', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
         })
         .capture('popupHover', function(actions, find) {
             actions.mouseMove(this.button);
+            actions.wait(3000);
         });
 });
 
@@ -247,14 +232,13 @@ gemini.suite('shopPopupCatalogue', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
         })
         .capture('popupHover', function(actions, find) {
             actions.mouseMove(this.button);
+            actions.wait(3000);
         });
 });
 
@@ -263,14 +247,13 @@ gemini.suite('srpPopupCatalogue', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
         })
         .capture('popupHover', function(actions, find) {
             actions.mouseMove(this.button);
+            actions.wait(3000);
         });
 });
 
@@ -279,14 +262,13 @@ gemini.suite('wishlistPopupCatalogue', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
         })
         .capture('popupHover', function(actions, find) {
             actions.mouseMove(this.button);
+            actions.wait(3000);
         });
 });
 

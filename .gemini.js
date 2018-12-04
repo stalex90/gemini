@@ -1,13 +1,14 @@
 module.exports = {
-    rootUrl: (process.env.LM_FLAG==0) ? 'https://kostroma.leroymerlin.ru' : 'http://drulmttaema01.int.adeo.com:4522/content/elbrus/kostroma',
+    rootUrl: (process.env.LM_FLAG==0) ? 'https://kostroma.leroymerlin.ru' : 'https://ux.aem.lmru.adeo.com',
     gridUrl: 'http://127.0.0.1:4444/wd/hub',
     //windowSize: '1600x900',
     calibrate: false,
     compositeImage: true,
-    sessionsPerBrowser: 1,
+    sessionsPerBrowser: 2,
     screenshotMode: 'viewport',
     screenshotDelay: 1000,
     suitesPerSession: 1,
+    //retry: 1,
 
     browsers: {
         'chrome-1600x900': {
@@ -16,7 +17,8 @@ module.exports = {
                 browserName: 'chrome',
                 chromeOptions: {
                     args: [ 'headless' ]
-                }
+                },
+                acceptInsecureCerts: true
             },
 
         },
@@ -28,7 +30,8 @@ module.exports = {
                 browserName: 'chrome',
                 chromeOptions: {
                     args: [ 'headless' ]
-                }
+                },
+                acceptInsecureCerts: true
             }
         },
 
@@ -38,7 +41,8 @@ module.exports = {
                 browserName: 'chrome',
                 chromeOptions: {
                     args: [ 'headless' ]
-                }
+                },
+                acceptInsecureCerts: true
             }
         },
 
@@ -48,7 +52,8 @@ module.exports = {
                 browserName: 'chrome',
                 chromeOptions: {
                     args: [ 'headless' ]
-                }
+                },
+                acceptInsecureCerts: true
             }
         },
 
@@ -58,7 +63,8 @@ module.exports = {
                 browserName: 'firefox',
                 "moz:firefoxOptions": {
                     args: ['-headless']
-                }
+                },
+                acceptInsecureCerts: true
             }
         },
 
@@ -68,7 +74,8 @@ module.exports = {
                 browserName: 'firefox',
                 "moz:firefoxOptions": {
                     args: ['-headless']
-                }
+                },
+                acceptInsecureCerts: true
             }
         },
         'firefox-800x600': {
@@ -77,7 +84,8 @@ module.exports = {
                 browserName: 'firefox',
                 "moz:firefoxOptions": {
                     args: ['-headless']
-                }
+                },
+                acceptInsecureCerts: true
             }
         },
         'firefox-480x800': {
@@ -86,7 +94,8 @@ module.exports = {
                 browserName: 'firefox',
                 "moz:firefoxOptions": {
                      args: ['-headless']
-                }
+                },
+                acceptInsecureCerts: true
             }
         }
         /*,
@@ -110,15 +119,15 @@ module.exports = {
     sets: {
         desktopTablet: {
             files: ['gemini/desktopTablet'],
-            browsers: ['chrome-1600x900', 'chrome-1024x768', 'chrome-800x600', 'firefox-1600x900', 'firefox-1024x768', 'firefox-800x600']
+            browsers: ['chrome-1600x900', /*'chrome-1024x768',*/ 'chrome-800x600'/*, 'firefox-1600x900', 'firefox-1024x768', 'firefox-800x600'*/]
         },
         desktopTabletMobile: {
             files: ['gemini/desktopTabletMobile'],
-            browsers: ['chrome-1600x900', 'chrome-1024x768', 'chrome-800x600', 'chrome-480x800', 'firefox-1600x900', 'firefox-1024x768', 'firefox-800x600', 'firefox-480x800']
+            browsers: ['chrome-1600x900', /*'chrome-1024x768',*/ 'chrome-800x600', 'chrome-480x800'/*, 'firefox-1600x900', 'firefox-1024x768', 'firefox-800x600', 'firefox-480x800'*/]
         },
         chromeDesktop: {
             files: ['gemini/chromeDesktop'],
-            browsers: ['chrome-1600x900', 'chrome-1024x768']
+            browsers: ['chrome-1600x900'/*, 'chrome-1024x768'*/]
         }/*,
         ie: {
             files: ['gemini/iesuite'],

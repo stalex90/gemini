@@ -1,12 +1,10 @@
-var helper = require('../../iesuite/helpme');
+var helper = require('../helpers/helpme');
 
 gemini.suite('obratnaya-svyazFields', (suite) => {
     suite.setUrl(helper.urlJson.obratnayaSvyaz[process.env.LM_FLAG])
         .setCaptureElements('body')
         .before(function(actions, find){
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
             helper.disableTopPanel(actions, find);
@@ -28,9 +26,7 @@ gemini.suite('obratnaya-svyazFieldsCity', (suite) => {
     suite.setUrl(helper.urlJson.obratnayaSvyaz[process.env.LM_FLAG])
         .setCaptureElements('.select2-container.select2-container--default.select2-container--open > span[class*="select2-dropdown"]')
         .before(function(actions, find){
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
             helper.disableTopPanel(actions, find);
@@ -47,9 +43,7 @@ gemini.suite('obratnaya-svyazFieldsShop', (suite) => {
     suite.setUrl(helper.urlJson.obratnayaSvyaz[process.env.LM_FLAG])
         .setCaptureElements('.select2-container.select2-container--default.select2-container--open > span[class*="select2-dropdown"]')
         .before(function(actions, find){
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
             helper.disableTopPanel(actions, find);
@@ -64,9 +58,7 @@ gemini.suite('obratnaya-svyazFieldsCategory', (suite) => {
     suite.setUrl(helper.urlJson.obratnayaSvyaz[process.env.LM_FLAG])
         .setCaptureElements('.select2-container.select2-container--default.select2-container--open > span[class*="select2-dropdown"]')
         .before(function(actions, find){
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
             helper.disableTopPanel(actions, find);

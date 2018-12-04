@@ -1,33 +1,30 @@
-var helper = require('../../iesuite/helpme');
+var helper = require('../helpers/helpme');
+var checkoutPage = require('../helpers/checkoutPage');
+var basketPage = require('../helpers/basketPage');
 
-/*gemini.suite('checkout', (suite) => {
+
+
+gemini.suite('checkout', (suite) => {
     suite.setUrl(helper.urlJson.checkout[process.env.LM_FLAG])
         .setCaptureElements('body')
         .before(function(actions, find){
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
-            actions.wait(5000);
+            helper.loginStaging(actions);
             helper.clickYesRegion(actions, find);
             actions.executeJS(function (window) {
-                window.CookieUtils.setBasketCookie({"cartNumber":"","syncStatus":1,"products":[{"code":"81964385","quantity":1}]});
+                window.CookieUtils.setBasketCookie({"cartNumber":"","syncStatus":1,"products":[{"code":"12420870","quantity":1}]});
             });
-            helper.clickBasket(actions, find);
-            actions.wait(5000);
-            helper.clickDeliveryOption(actions, find);
-            helper.clickCheckout(actions, find);
-            actions.wait(5000);
-            helper.clickContinueWithoutRegistration(actions, find);
-            actions.wait(5000);
+            basketPage.clickBasket(actions);
+            checkoutPage.clickDeliveryOption(actions);
+            checkoutPage.clickCheckout(actions);
+            checkoutPage.clickContinueWithoutRegistration(actions);
             helper.clickYesCookie(actions, find);
             helper.disableTopPanel(actions, find);
             helper.removeDescriptionFooterBlock(actions, find);
         })
         .capture('plain')
         .after(function(actions, find){
-            helper.clickBackToCart(actions, find);
-            actions.wait(3000);
-            helper.clearCart(actions, find);
+            checkoutPage.clickBackToCart(actions);
+            basketPage.clearCart(actions);
         });
 });
 
@@ -35,29 +32,22 @@ gemini.suite('checkoutHeader', (suite) => {
     suite.setUrl(helper.urlJson.checkout[process.env.LM_FLAG])
         .setCaptureElements('div[class*="header-inner"] > div.container')
         .before(function(actions, find){
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
-            actions.wait(5000);
+            helper.loginStaging(actions);
             helper.clickYesRegion(actions, find);
             actions.executeJS(function (window) {
-                window.CookieUtils.setBasketCookie({"cartNumber":"","syncStatus":1,"products":[{"code":"81964385","quantity":1}]});
+                window.CookieUtils.setBasketCookie({"cartNumber":"","syncStatus":1,"products":[{"code":"12420870","quantity":1}]});
             });
-            helper.clickBasket(actions, find);
-            actions.wait(5000);
-            helper.clickDeliveryOption(actions, find);
-            helper.clickCheckout(actions, find);
-            actions.wait(5000);
-            helper.clickContinueWithoutRegistration(actions, find);
-            actions.wait(5000);
+            basketPage.clickBasket(actions);
+            checkoutPage.clickDeliveryOption(actions);
+            checkoutPage.clickCheckout(actions);
+            checkoutPage.clickContinueWithoutRegistration(actions);
             helper.clickYesCookie(actions, find);
             helper.scrollDown(actions,find);
         })
         .capture('plain')
         .after(function(actions, find){
-            helper.clickBackToCart(actions, find);
-            actions.wait(3000);
-            helper.clearCart(actions, find);
+            checkoutPage.clickBackToCart(actions);
+            basketPage.clearCart(actions);
         });
 });
 
@@ -65,92 +55,110 @@ gemini.suite('checkoutCookie', (suite) => {
     suite.setUrl(helper.urlJson.checkout[process.env.LM_FLAG])
         .setCaptureElements('.cookie-notification-modal')
         .before(function(actions, find){
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
-            actions.wait(5000);
+            helper.loginStaging(actions);
             helper.clickYesRegion(actions, find);
             actions.executeJS(function (window) {
-                window.CookieUtils.setBasketCookie({"cartNumber":"","syncStatus":1,"products":[{"code":"81964385","quantity":1}]});
+                window.CookieUtils.setBasketCookie({"cartNumber":"","syncStatus":1,"products":[{"code":"12420870","quantity":1}]});
             });
-            helper.clickBasket(actions, find);
-            actions.wait(5000);
-            helper.clickDeliveryOption(actions, find);
-            helper.clickCheckout(actions, find);
-            actions.wait(5000);
-            helper.clickContinueWithoutRegistration(actions, find);
-            actions.wait(5000);
+            basketPage.clickBasket(actions);
+            checkoutPage.clickDeliveryOption(actions);
+            checkoutPage.clickCheckout(actions);
+            checkoutPage.clickContinueWithoutRegistration(actions);
         })
         .capture('plain')
         .after(function(actions, find){
-            helper.clickBackToCart(actions, find);
-            actions.wait(3000);
-            helper.clearCart(actions, find);
+            checkoutPage.clickBackToCart(actions);
+            basketPage.clearCart(actions);
         });
-});*/
+});
 
-/*
+
 gemini.suite('checkoutPointMap', (suite) => {
     suite.setUrl(helper.urlJson.checkout[process.env.LM_FLAG])
         .setCaptureElements('body')
         .before(function(actions, find){
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
-            actions.wait(5000);
+            helper.loginStaging(actions);
             helper.clickYesRegion(actions, find);
             actions.executeJS(function (window) {
-                window.CookieUtils.setBasketCookie({"cartNumber":"","syncStatus":1,"products":[{"code":"81964385","quantity":1}]});
+                window.CookieUtils.setBasketCookie({"cartNumber":"","syncStatus":1,"products":[{"code":"12420870","quantity":1}]});
             });
-            helper.clickBasket(actions, find);
-            actions.wait(5000);
-            helper.clickDeliveryOption(actions, find);
-            helper.clickCheckout(actions, find);
-            actions.wait(5000);
-            helper.clickContinueWithoutRegistration(actions, find);
-            actions.wait(5000);
+            basketPage.clickBasket(actions);
+            checkoutPage.clickDeliveryOption(actions);
+            checkoutPage.clickCheckout(actions);
+            checkoutPage.clickContinueWithoutRegistration(actions);
             helper.clickYesCookie(actions, find);
             helper.disableTopPanel(actions, find);
             helper.removeDescriptionFooterBlock(actions, find);
-            helper.clickPointMap(actions, find);
+            checkoutPage.clickPointMap(actions);
         })
         .capture('plain')
         .after(function(actions, find){
-            helper.clickBackToCart(actions, find);
-            actions.wait(3000);
-            helper.clearCart(actions, find);
+            checkoutPage.clickBackToCart(actions);
+            basketPage.clearCart(actions);
         });
-});*/
+});
 
 gemini.suite('checkoutChangeShop', (suite) => {
     suite.setUrl(helper.urlJson.checkout[process.env.LM_FLAG])
-        .setCaptureElements('body')
+        .setCaptureElements('.fancybox-modal.change-region-modal')
         .before(function(actions, find){
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
-            actions.wait(5000);
+            helper.loginStaging(actions);
             helper.clickYesRegion(actions, find);
             actions.executeJS(function (window) {
-                window.CookieUtils.setBasketCookie({"cartNumber":"","syncStatus":1,"products":[{"code":"81964385","quantity":1}]});
+                window.CookieUtils.setBasketCookie({"cartNumber":"","syncStatus":1,"products":[{"code":"12420870","quantity":1}]});
             });
-            helper.clickBasket(actions, find);
-            actions.wait(5000);
-            helper.clickDeliveryOption(actions, find);
-            helper.clickCheckout(actions, find);
-            actions.wait(5000);
-            helper.clickContinueWithoutRegistration(actions, find);
-            actions.wait(5000);
+            basketPage.clickBasket(actions);
+            checkoutPage.clickDeliveryOption(actions);
+            checkoutPage.clickCheckout(actions);
+            checkoutPage.clickContinueWithoutRegistration(actions);
             helper.clickYesCookie(actions, find);
             helper.disableTopPanel(actions, find);
             helper.removeDescriptionFooterBlock(actions, find);
-            helper.clickClickCheckoutChangeRegion(actions, find);
+            checkoutPage.clickCheckoutChangeRegion(actions);
+        })
+        .capture('plain')
+        .after(function(actions, find){
+            checkoutPage.clickBackToCart(actions);
+            basketPage.clearCart(actions);
+        });
+});
+
+gemini.suite('checkoutSuccess', (suite) => {
+    suite.setUrl("checkout/success/0059110122/")
+        .setCaptureElements('body')
+        .before(function(actions, find){
+            helper.loginStaging(actions);
+            helper.clickYesRegion(actions, find);
+            helper.clickYesCookie(actions, find);
+            helper.disableTopPanel(actions, find);
+            helper.removeDescriptionFooterBlock(actions, find);
+        })
+        .capture('plain')
+        .after(function(actions, find){
+            checkoutPage.clickBackToCart(actions);
+            basketPage.clearCart(actions);
+        });
+});
+
+gemini.suite('checkoutAuthorization', (suite) => {
+    suite.setUrl(helper.urlJson.checkout[process.env.LM_FLAG])
+        .setCaptureElements('body')
+        .before(function(actions, find){
+            helper.loginStaging(actions);
+            helper.clickYesRegion(actions, find);
+            actions.executeJS(function (window) {
+                window.CookieUtils.setBasketCookie({"cartNumber":"","syncStatus":1,"products":[{"code":"12420870","quantity":1}]});
+            });
+            basketPage.clickBasket(actions);
+            checkoutPage.clickDeliveryOption(actions);
+            checkoutPage.clickCheckout(actions);
+            helper.clickYesCookie(actions, find);
             actions.wait(5000);
         })
         .capture('plain')
         .after(function(actions, find){
-            helper.clickBackToCart(actions, find);
-            actions.wait(3000);
-            helper.clearCart(actions, find);
+            basketPage.clickBasket(actions);
+            basketPage.clearCart(actions);
         });
 });
+

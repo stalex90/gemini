@@ -1,4 +1,4 @@
-var helper = require('../../iesuite/helpme');
+var helper = require('../helpers/helpme');
 var captureLocator = '.basket-list-empty';
 var buttonLocator = '.basket-link';
 
@@ -7,9 +7,7 @@ gemini.suite('advicePopupCart', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
         })
@@ -23,9 +21,7 @@ gemini.suite('brandPopupCart', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
         })
@@ -39,9 +35,7 @@ gemini.suite('brandsPopupCart', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
         })
@@ -55,9 +49,7 @@ gemini.suite('cataloguePopupCart', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
         })
@@ -71,9 +63,7 @@ gemini.suite('comparePopupCart', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
         })
@@ -87,9 +77,7 @@ gemini.suite('faqPopupCart', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
         })
@@ -103,9 +91,7 @@ gemini.suite('mainPopupCart', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
         })
@@ -119,9 +105,7 @@ gemini.suite('obratnayaSvyazPopupCart', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
         })
@@ -135,9 +119,7 @@ gemini.suite('pdpPopupCart', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
         })
@@ -151,9 +133,7 @@ gemini.suite('plpPopupCart', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
         })
@@ -167,9 +147,7 @@ gemini.suite('proektyPopupCart', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
         })
@@ -183,9 +161,7 @@ gemini.suite('registerPopupCart', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
         })
@@ -199,9 +175,7 @@ gemini.suite('servicePopupCart', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
         })
@@ -215,9 +189,7 @@ gemini.suite('shopPopupCart', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
         })
@@ -231,9 +203,7 @@ gemini.suite('srpPopupCart', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
         })
@@ -247,9 +217,7 @@ gemini.suite('wishlistPopupCart', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
         })

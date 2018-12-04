@@ -1,4 +1,4 @@
-var helper = require('../../iesuite/helpme');
+var helper = require('../helpers/helpme');
 var captureLocator = '.shop-list-empty';
 var buttonLocator = '.shop-list-link';
 
@@ -7,14 +7,13 @@ gemini.suite('advicePopupShopList', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
         })
         .capture('popupHover', function(actions, find) {
             actions.mouseMove(this.button);
+            actions.wait(3000);
         });
 });
 
@@ -23,14 +22,13 @@ gemini.suite('basketPopupShopList', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
         })
         .capture('popupHover', function(actions, find) {
             actions.mouseMove(this.button);
+            actions.wait(3000);
         });
 });
 
@@ -40,14 +38,13 @@ gemini.suite('brandPopupShopList', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
         })
         .capture('popupHover', function(actions, find) {
             actions.mouseMove(this.button);
+            actions.wait(3000);
         });
 });
 
@@ -56,14 +53,13 @@ gemini.suite('brandsPopupShopList', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
         })
         .capture('popupHover', function(actions, find) {
             actions.mouseMove(this.button);
+            actions.wait(3000);
         });
 });
 
@@ -72,14 +68,13 @@ gemini.suite('cataloguePopupShopList', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
         })
         .capture('popupHover', function(actions, find) {
             actions.mouseMove(this.button);
+            actions.wait(3000);
         });
 });
 
@@ -88,14 +83,13 @@ gemini.suite('checkoutPopupShopList', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
         })
         .capture('popupHover', function(actions, find) {
             actions.mouseMove(this.button);
+            actions.wait(3000);
         });
 });
 
@@ -104,14 +98,13 @@ gemini.suite('comparePopupShopList', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
         })
         .capture('popupHover', function(actions, find) {
             actions.mouseMove(this.button);
+            actions.wait(3000);
         });
 });
 
@@ -120,14 +113,13 @@ gemini.suite('faqPopupShopList', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
         })
         .capture('popupHover', function(actions, find) {
             actions.mouseMove(this.button);
+            actions.wait(3000);
         });
 });
 
@@ -136,14 +128,13 @@ gemini.suite('mainPopupShopList', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
         })
         .capture('popupHover', function(actions, find) {
             actions.mouseMove(this.button);
+            actions.wait(3000);
         });
 });
 
@@ -152,14 +143,13 @@ gemini.suite('obratnayaSvyazPopupShopList', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
         })
         .capture('popupHover', function(actions, find) {
             actions.mouseMove(this.button);
+            actions.wait(3000);
         });
 });
 
@@ -168,14 +158,13 @@ gemini.suite('pdpPopupShopList', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
         })
         .capture('popupHover', function(actions, find) {
             actions.mouseMove(this.button);
+            actions.wait(3000);
         });
 });
 
@@ -184,14 +173,13 @@ gemini.suite('plpPopupShopList', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
         })
         .capture('popupHover', function(actions, find) {
             actions.mouseMove(this.button);
+            actions.wait(3000);
         });
 });
 
@@ -200,14 +188,13 @@ gemini.suite('proektyPopupShopList', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
         })
         .capture('popupHover', function(actions, find) {
             actions.mouseMove(this.button);
+            actions.wait(3000);
         });
 });
 
@@ -216,14 +203,13 @@ gemini.suite('registerPopupShopList', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
         })
         .capture('popupHover', function(actions, find) {
             actions.mouseMove(this.button);
+            actions.wait(3000);
         });
 });
 
@@ -232,14 +218,13 @@ gemini.suite('servicePopupShopList', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
         })
         .capture('popupHover', function(actions, find) {
             actions.mouseMove(this.button);
+            actions.wait(3000);
         });
 });
 
@@ -248,14 +233,13 @@ gemini.suite('shopPopupShopList', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
         })
         .capture('popupHover', function(actions, find) {
             actions.mouseMove(this.button);
+            actions.wait(3000);
         });
 });
 
@@ -264,14 +248,13 @@ gemini.suite('srpPopupShopList', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
         })
         .capture('popupHover', function(actions, find) {
             actions.mouseMove(this.button);
+            actions.wait(3000);
         });
 });
 
@@ -280,14 +263,13 @@ gemini.suite('wishlistPopupShopList', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             helper.clickYesRegion(actions, find);
             helper.clickYesCookie(actions, find);
         })
         .capture('popupHover', function(actions, find) {
             actions.mouseMove(this.button);
+            actions.wait(3000);
         });
 });
 

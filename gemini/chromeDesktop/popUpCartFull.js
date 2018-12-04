@@ -1,4 +1,4 @@
-var helper = require('../../iesuite/helpme');
+var helper = require('../helpers/helpme');
 var captureLocator = '.basket-list';
 var buttonLocator = 'span[class*="icon-basket"]';
 
@@ -7,11 +7,9 @@ gemini.suite('advicePopupCartFull', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             actions.executeJS(function (window) {
-                window.CookieUtils.setBasketCookie({"cartNumber":"","syncStatus":1,"products":[{"code":"81964385","quantity":1}]});
+                window.CookieUtils.setBasketCookie({"cartNumber":"","syncStatus":1,"products":[{"code":"12420870","quantity":1}]});
             });
             actions.executeJS(function (window) {
                 window.eval("location.reload();");
@@ -22,6 +20,7 @@ gemini.suite('advicePopupCartFull', (suite) => {
         })
         .capture('popupHover', function(actions, find) {
             actions.mouseMove(this.button);
+            actions.wait(3000);
         });
 });
 
@@ -30,11 +29,9 @@ gemini.suite('brandPopupCartFull', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             actions.executeJS(function (window) {
-                window.CookieUtils.setBasketCookie({"cartNumber":"","syncStatus":1,"products":[{"code":"81964385","quantity":1}]});
+                window.CookieUtils.setBasketCookie({"cartNumber":"","syncStatus":1,"products":[{"code":"12420870","quantity":1}]});
             });
             actions.executeJS(function (window) {
                 window.eval("location.reload();");
@@ -45,6 +42,7 @@ gemini.suite('brandPopupCartFull', (suite) => {
         })
         .capture('popupHover', function(actions, find) {
             actions.mouseMove(this.button);
+            actions.wait(3000);
         });
 });
 
@@ -53,11 +51,9 @@ gemini.suite('brandsPopupCartFull', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             actions.executeJS(function (window) {
-                window.CookieUtils.setBasketCookie({"cartNumber":"","syncStatus":1,"products":[{"code":"81964385","quantity":1}]});
+                window.CookieUtils.setBasketCookie({"cartNumber":"","syncStatus":1,"products":[{"code":"12420870","quantity":1}]});
             });
             actions.executeJS(function (window) {
                 window.eval("location.reload();");
@@ -68,6 +64,7 @@ gemini.suite('brandsPopupCartFull', (suite) => {
         })
         .capture('popupHover', function(actions, find) {
             actions.mouseMove(this.button);
+            actions.wait(3000);
         });
 });
 
@@ -76,11 +73,9 @@ gemini.suite('cataloguePopupCartFull', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             actions.executeJS(function (window) {
-                window.CookieUtils.setBasketCookie({"cartNumber":"","syncStatus":1,"products":[{"code":"81964385","quantity":1}]});
+                window.CookieUtils.setBasketCookie({"cartNumber":"","syncStatus":1,"products":[{"code":"12420870","quantity":1}]});
             });
             actions.executeJS(function (window) {
                 window.eval("location.reload();");
@@ -91,6 +86,7 @@ gemini.suite('cataloguePopupCartFull', (suite) => {
         })
         .capture('popupHover', function(actions, find) {
             actions.mouseMove(this.button);
+            actions.wait(3000);
         });
 });
 
@@ -99,11 +95,9 @@ gemini.suite('comparePopupCartFull', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             actions.executeJS(function (window) {
-                window.CookieUtils.setBasketCookie({"cartNumber":"","syncStatus":1,"products":[{"code":"81964385","quantity":1}]});
+                window.CookieUtils.setBasketCookie({"cartNumber":"","syncStatus":1,"products":[{"code":"12420870","quantity":1}]});
             });
             actions.executeJS(function (window) {
                 window.eval("location.reload();");
@@ -114,6 +108,7 @@ gemini.suite('comparePopupCartFull', (suite) => {
         })
         .capture('popupHover', function(actions, find) {
             actions.mouseMove(this.button);
+            actions.wait(3000);
         });
 });
 
@@ -122,11 +117,9 @@ gemini.suite('faqPopupCartFull', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             actions.executeJS(function (window) {
-                window.CookieUtils.setBasketCookie({"cartNumber":"","syncStatus":1,"products":[{"code":"81964385","quantity":1}]});
+                window.CookieUtils.setBasketCookie({"cartNumber":"","syncStatus":1,"products":[{"code":"12420870","quantity":1}]});
             });
             actions.executeJS(function (window) {
                 window.eval("location.reload();");
@@ -137,6 +130,7 @@ gemini.suite('faqPopupCartFull', (suite) => {
         })
         .capture('popupHover', function(actions, find) {
             actions.mouseMove(this.button);
+            actions.wait(3000);
         });
 });
 
@@ -145,11 +139,9 @@ gemini.suite('mainPopupCartFull', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             actions.executeJS(function (window) {
-                window.CookieUtils.setBasketCookie({"cartNumber":"","syncStatus":1,"products":[{"code":"81964385","quantity":1}]});
+                window.CookieUtils.setBasketCookie({"cartNumber":"","syncStatus":1,"products":[{"code":"12420870","quantity":1}]});
             });
             actions.executeJS(function (window) {
                 window.eval("location.reload();");
@@ -160,6 +152,7 @@ gemini.suite('mainPopupCartFull', (suite) => {
         })
         .capture('popupHover', function(actions, find) {
             actions.mouseMove(this.button);
+            actions.wait(3000);
         });
 });
 
@@ -168,11 +161,9 @@ gemini.suite('obratnayaSvyazPopupCartFull', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             actions.executeJS(function (window) {
-                window.CookieUtils.setBasketCookie({"cartNumber":"","syncStatus":1,"products":[{"code":"81964385","quantity":1}]});
+                window.CookieUtils.setBasketCookie({"cartNumber":"","syncStatus":1,"products":[{"code":"12420870","quantity":1}]});
             });
             actions.executeJS(function (window) {
                 window.eval("location.reload();");
@@ -183,6 +174,7 @@ gemini.suite('obratnayaSvyazPopupCartFull', (suite) => {
         })
         .capture('popupHover', function(actions, find) {
             actions.mouseMove(this.button);
+            actions.wait(3000);
         });
 });
 
@@ -191,11 +183,9 @@ gemini.suite('pdpPopupCartFull', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             actions.executeJS(function (window) {
-                window.CookieUtils.setBasketCookie({"cartNumber":"","syncStatus":1,"products":[{"code":"81964385","quantity":1}]});
+                window.CookieUtils.setBasketCookie({"cartNumber":"","syncStatus":1,"products":[{"code":"12420870","quantity":1}]});
             });
             actions.executeJS(function (window) {
                 window.eval("location.reload();");
@@ -206,6 +196,7 @@ gemini.suite('pdpPopupCartFull', (suite) => {
         })
         .capture('popupHover', function(actions, find) {
             actions.mouseMove(this.button);
+            actions.wait(3000);
         });
 });
 
@@ -214,11 +205,9 @@ gemini.suite('plpPopupCartFull', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             actions.executeJS(function (window) {
-                window.CookieUtils.setBasketCookie({"cartNumber":"","syncStatus":1,"products":[{"code":"81964385","quantity":1}]});
+                window.CookieUtils.setBasketCookie({"cartNumber":"","syncStatus":1,"products":[{"code":"12420870","quantity":1}]});
             });
             actions.executeJS(function (window) {
                 window.eval("location.reload();");
@@ -229,6 +218,7 @@ gemini.suite('plpPopupCartFull', (suite) => {
         })
         .capture('popupHover', function(actions, find) {
             actions.mouseMove(this.button);
+            actions.wait(3000);
         });
 });
 
@@ -237,11 +227,9 @@ gemini.suite('proektyPopupCartFull', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             actions.executeJS(function (window) {
-                window.CookieUtils.setBasketCookie({"cartNumber":"","syncStatus":1,"products":[{"code":"81964385","quantity":1}]});
+                window.CookieUtils.setBasketCookie({"cartNumber":"","syncStatus":1,"products":[{"code":"12420870","quantity":1}]});
             });
             actions.executeJS(function (window) {
                 window.eval("location.reload();");
@@ -252,6 +240,7 @@ gemini.suite('proektyPopupCartFull', (suite) => {
         })
         .capture('popupHover', function(actions, find) {
             actions.mouseMove(this.button);
+            actions.wait(3000);
         });
 });
 
@@ -260,11 +249,9 @@ gemini.suite('registerPopupCartFull', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             actions.executeJS(function (window) {
-                window.CookieUtils.setBasketCookie({"cartNumber":"","syncStatus":1,"products":[{"code":"81964385","quantity":1}]});
+                window.CookieUtils.setBasketCookie({"cartNumber":"","syncStatus":1,"products":[{"code":"12420870","quantity":1}]});
             });
             actions.executeJS(function (window) {
                 window.eval("location.reload();");
@@ -275,6 +262,7 @@ gemini.suite('registerPopupCartFull', (suite) => {
         })
         .capture('popupHover', function(actions, find) {
             actions.mouseMove(this.button);
+            actions.wait(3000);
         });
 });
 
@@ -283,11 +271,9 @@ gemini.suite('servicePopupCartFull', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             actions.executeJS(function (window) {
-                window.CookieUtils.setBasketCookie({"cartNumber":"","syncStatus":1,"products":[{"code":"81964385","quantity":1}]});
+                window.CookieUtils.setBasketCookie({"cartNumber":"","syncStatus":1,"products":[{"code":"12420870","quantity":1}]});
             });
             actions.executeJS(function (window) {
                 window.eval("location.reload();");
@@ -298,6 +284,7 @@ gemini.suite('servicePopupCartFull', (suite) => {
         })
         .capture('popupHover', function(actions, find) {
             actions.mouseMove(this.button);
+            actions.wait(3000);
         });
 });
 
@@ -306,11 +293,9 @@ gemini.suite('shopPopupCartFull', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             actions.executeJS(function (window) {
-                window.CookieUtils.setBasketCookie({"cartNumber":"","syncStatus":1,"products":[{"code":"81964385","quantity":1}]});
+                window.CookieUtils.setBasketCookie({"cartNumber":"","syncStatus":1,"products":[{"code":"12420870","quantity":1}]});
             });
             actions.executeJS(function (window) {
                 window.eval("location.reload();");
@@ -321,6 +306,7 @@ gemini.suite('shopPopupCartFull', (suite) => {
         })
         .capture('popupHover', function(actions, find) {
             actions.mouseMove(this.button);
+            actions.wait(3000);
         });
 });
 
@@ -329,11 +315,9 @@ gemini.suite('srpPopupCartFull', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             actions.executeJS(function (window) {
-                window.CookieUtils.setBasketCookie({"cartNumber":"","syncStatus":1,"products":[{"code":"81964385","quantity":1}]});
+                window.CookieUtils.setBasketCookie({"cartNumber":"","syncStatus":1,"products":[{"code":"12420870","quantity":1}]});
             });
             actions.executeJS(function (window) {
                 window.eval("location.reload();");
@@ -344,6 +328,7 @@ gemini.suite('srpPopupCartFull', (suite) => {
         })
         .capture('popupHover', function(actions, find) {
             actions.mouseMove(this.button);
+            actions.wait(3000);
         });
 });
 
@@ -352,11 +337,9 @@ gemini.suite('wishlistPopupCartFull', (suite) => {
         .setCaptureElements(captureLocator)
         .before(function(actions, find){
             this.button = find(buttonLocator);
-            if (helper.flag != 0) {
-                helper.loginStaging(actions, find);
-            }
+            helper.loginStaging(actions);
             actions.executeJS(function (window) {
-                window.CookieUtils.setBasketCookie({"cartNumber":"","syncStatus":1,"products":[{"code":"81964385","quantity":1}]});
+                window.CookieUtils.setBasketCookie({"cartNumber":"","syncStatus":1,"products":[{"code":"12420870","quantity":1}]});
             });
             actions.executeJS(function (window) {
                 window.eval("location.reload();");
@@ -367,6 +350,7 @@ gemini.suite('wishlistPopupCartFull', (suite) => {
         })
         .capture('popupHover', function(actions, find) {
             actions.mouseMove(this.button);
+            actions.wait(3000);
         });
 });
 
