@@ -1,5 +1,5 @@
 module.exports = {
-    rootUrl: (process.env.LM_FLAG==0) ? 'https://kostroma.leroymerlin.ru' : 'https://kostroma.fs1.aem.lmru.adeo.com',
+    rootUrl: (process.env.LM_FLAG==0) ? 'https://kostroma.leroymerlin.ru' : 'https://kostroma.aem.lmru.adeo.com',
     gridUrl: 'http://127.0.0.1:4444/wd/hub',
     //windowSize: '1600x900',
     calibrate: false,

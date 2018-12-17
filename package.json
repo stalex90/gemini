@@ -5,7 +5,8 @@
   "main": ".gemini.js",
   "dependencies": {
     "geckodriver": "^1.12.2",
-    "html-reporter": "^2.22.0"
+    "html-reporter": "^2.22.0",
+    "wd": "^1.11.1"
   },
   "devDependencies": {
     "gemini": "5.9.1"
